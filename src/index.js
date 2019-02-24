@@ -1,7 +1,34 @@
-function sayHiTo(name) {
-  return `Hi, ${name}`;
-}
+import { initGoogleAnalytics, onRouteChangeGoogleAnalytics } from './google.analytics';
+// import { initAdobeAnalytics } from './adobe.analytics';
+// import { initFacebookAnalytics } from './facebook.analytics';
+// import { initTwitterAnalytics } from './twitter.analytics';
+// import { initLinkedinAnalytics } from './linkedin.analytics';
 
-const message = sayHiTo('Bruno');
+let isInitialized = false;
+let isGoogleDefined = false;
 
-console.log(message);
+export const initAnalytics = (options) => {
+  const {
+    route,
+    google
+  } = options;
+
+  if (isInitialized) {
+    throw new Error('Trying to initialize Analytics more than one.')
+  }
+
+  isInitialized = true;
+
+  if (google) {
+    isGoogleDefined = true;
+    initGoogleAnalytics(google);
+  }
+
+  onRouteChangeAnalytics(options.route);
+};
+
+export const onRouteChangeAnalytics = (route) => {
+  if (isGoogleDefined) {
+    onRouteChangeGoogleAnalytics(route);
+  }
+};
