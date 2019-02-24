@@ -1,6 +1,6 @@
 {
   "name": "lazy-analytics",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Package that helps to add Google Analytics, Adobe Analytics, Facebook Pixel, Twitter Pixel and Linkedin Pixel to your website.",
   "main": "dist/main.js",
   "scripts": {
