@@ -1,9 +1,18 @@
 import { initAnalytics, onRouteChangeAnalytics } from '../../src/index';
+import adblockDetect from 'adblock-detect';
 
 const $log = document.querySelector('.js-log');
 const log = (text) => {
   $log.innerText = text;
 };
+
+adblockDetect(adblockDetected => {
+  if (!adblockDetected) {
+    return;
+  }
+
+  throw new Error('Disable Ad block to have analytics working.')
+});
 
 // Start analytics when you're ready
 // In a real case, this will happen after app configuration
@@ -13,7 +22,10 @@ setTimeout(() => {
   log(`Analytics initialized.`);
   const options = {
     route: null,
-    google: 'UA-XXXXX-Y'
+    google: 'UA-XXXXX-Y',
+    facebook: 'facebook pixel code',
+    linkedin: 'linkedin pixel code',
+    twitter: 'twitter pixel code',
   };
 
   initAnalytics(options);
