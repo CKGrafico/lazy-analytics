@@ -26,6 +26,7 @@ setTimeout(() => {
     facebook: 'facebook pixel code',
     linkedin: 'linkedin pixel code',
     twitter: 'twitter pixel code',
+    adobe: 'ADOBE'
   };
 
   initAnalytics(options);
@@ -41,11 +42,7 @@ const onChangeRoute = () => {
     lastRoute = route;
     log(`The route changed to ${route}`);
 
-    const options = {
-      route,
-      google: 'UA-XXXXX-Y'
-    };
-    onRouteChangeAnalytics(options);
+    onRouteChangeAnalytics(route);
   }
 
   requestAnimationFrame(onChangeRoute);

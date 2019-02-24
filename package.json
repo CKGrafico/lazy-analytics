@@ -1,7 +1,7 @@
 {
   "name": "lazy-analytics",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.1.2",
+  "description": "Package that helps to add Google Analytics, Adobe Analytics, Facebook Pixel, Twitter Pixel and Linkedin Pixel to your website.",
   "main": "dist/main.js",
   "scripts": {
     "build": "webpack --mode production --module-bind js=babel-loader",
@@ -18,10 +18,11 @@
   },
   "keywords": [
     "analytics",
-    "google",
-    "analytics",
-    "facebook",
-    "pixel"
+    "google analytics",
+    "adobe analytics",
+    "facebook pixel",
+    "twitter pixel",
+    "linkedin pixel"
   ],
   "author": "Quique Fdez Guerra",
   "license": "MIT",
