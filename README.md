@@ -1,5 +1,6 @@
 # Lazy Analytics
 This package is a helper to have some platform analytics in your website, the idea is to be able to add them as easy as possible.
+Is also important to us to be able to initialize the analytics in the moment that we consider and to be able to trigger global events on change route.
 
 [![Build Status](https://travis-ci.org/CKGrafico/Lazy-Analytics.svg?branch=vue)](https://travis-ci.org/CKGrafico/Lazy-Analytics)
 ![GitHub last commit](https://img.shields.io/github/last-commit/CKGrafico/Lazy-Analytics/master.svg)
