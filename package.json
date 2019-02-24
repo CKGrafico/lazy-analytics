@@ -1,0 +1,38 @@
+{
+  "name": "lazy-analytics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel ./src -d ./dist",
+    "lint": "eslint ./src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CKGrafico/lazy-analytics.git"
+  },
+  "keywords": [
+    "analytics",
+    "google",
+    "analytics",
+    "facebook",
+    "pixel"
+  ],
+  "author": "Quique Fdez Guerra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CKGrafico/lazy-analytics/issues"
+  },
+  "homepage": "https://github.com/CKGrafico/lazy-analytics#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.14.1",
+    "husky": "^1.3.1"
+  }
+}
