@@ -9,11 +9,6 @@
     "build": "webpack --mode production --module-bind js=babel-loader",
     "lint": "eslint ./src"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run lint"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CKGrafico/lazy-analytics.git"
