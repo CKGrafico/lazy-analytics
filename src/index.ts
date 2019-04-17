@@ -19,6 +19,8 @@ export const initAnalytics = (options) => {
     title: document.title
   };
 
+  const opts = {...defaultOptions, ...options};
+
   const {
     route,
     google,
@@ -29,7 +31,7 @@ export const initAnalytics = (options) => {
     consentCookie,
     language,
     title
-  } = {...defaultOptions, ...options};
+  } = opts;
 
   if (isInitialized) {
     throw new Error('Trying to initialize Analytics more than one.')
@@ -66,3 +68,8 @@ export const onRouteChangeAnalytics = (route) => {
     onRouteChangeGoogleAnalytics(route);
   }
 };
+
+export default {
+  initAnalytics,
+  onRouteChangeAnalytics
+}
