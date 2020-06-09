@@ -4,7 +4,7 @@ export const initAdobeAnalytics = (id, consentCookieName, market, pageName) => {
   document.head.appendChild(script);
 
   setTimeout(() => {
-    const { awa } = window;
+    const { awa } = window as any;
 
     const config = {
       syncMuid: awa.utils.isValueAssigned(awa.cookie.getCookie(consentCookieName)),
@@ -26,4 +26,3 @@ export const initAdobeAnalytics = (id, consentCookieName, market, pageName) => {
     awa.init(config);
   }, 1000);
 };
-
